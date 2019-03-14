@@ -22,8 +22,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func ggBtnPressed(_ sender: Any) {
-        self.view.backgroundColor = .random() //UIColor.purple
+        self.view.backgroundColor = UIColor.random() //UIColor.purple
         ggBtn.tintColor = UIColor.white
+        
+        // code for moving to a new screen(view)
+        // identifier string must match string in storyboard
         //performSegue(withIdentifier: "gogold", sender: nil)
     }
     
@@ -34,13 +37,16 @@ class ViewController: UIViewController {
 
 extension CGFloat {
     static func random() -> CGFloat {
-        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+        // arc4random_uniform uperbound - 1
+        // 0-255 different values for r,g,b
+        // alternative: CGFloat(arc4random()) / CGFloat(UInt32.max)
+        return CGFloat(arc4random_uniform(256)) / CGFloat(255)
     }
 }
 
 extension UIColor {
     static func random() -> UIColor {
-        return UIColor(red:   .random(),
+        return UIColor(red:   CGFloat.random(),
                        green: .random(),
                        blue:  .random(),
                        alpha: 1.0)

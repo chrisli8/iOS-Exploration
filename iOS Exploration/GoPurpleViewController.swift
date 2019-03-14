@@ -23,7 +23,11 @@ class GoPurpleViewController: UIViewController {
     }
     
     @IBAction func gpBtnPressed(_ sender: Any) {
+        // returning to the original screen this way creates a brand new view
         //performSegue(withIdentifier: "gopurple", sender: nil)
+        
+        // this method is prefered as it only dismisses the current view
+        // the app goes to the view underneath (the one displayed before)
         dismiss(animated: true, completion: nil)
     }
     
