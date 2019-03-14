@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         
         // code for moving to a new screen(view)
         // identifier string must match string in storyboard
-        //performSegue(withIdentifier: "gogold", sender: nil)
+        performSegue(withIdentifier: "gogold", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

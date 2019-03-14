@@ -9,12 +9,18 @@
 import UIKit
 
 class GoPurpleViewController: UIViewController {
-
+    @IBOutlet weak var view1: UIView!
+    @IBOutlet weak var view2: UIView!
+    @IBOutlet weak var view3: UIView!
+    @IBOutlet weak var gpBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.yellow
+        
+        // set screens background color to yellow
+        //self.view.backgroundColor = UIColor.yellow
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +34,14 @@ class GoPurpleViewController: UIViewController {
         
         // this method is prefered as it only dismisses the current view
         // the app goes to the view underneath (the one displayed before)
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
+        
+        gpBtn.tintColor = UIColor.white
+        
+        // set each view's background to a random color
+        view1.backgroundColor = UIColor.random()
+        view2.backgroundColor = UIColor.random()
+        view3.backgroundColor = UIColor.random()
     }
     
     
