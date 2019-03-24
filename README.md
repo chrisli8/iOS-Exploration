@@ -148,8 +148,10 @@ extension UIColor {
 }
 ```
 
-The repository as a more advanced version of the app that has a segue and shows three colors instead of just one. Check out the code for some help.
+The repository has a more advanced version of the app that has a segue and shows three colors instead of just one. Check out the code for some help.
 
+Apple has tutorials to get stated with iOS Development.
+iOS Development: [https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html#//apple_ref/doc/uid/TP40015214-CH2-SW1]
 
 
 
